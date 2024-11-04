@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="Bình luận" />
+
+            <TextView
+                android:id="@+id/tv_numberOfComment"
+                android:fontFamily="sans-serif-black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_light"
+                android:textSize="18sp"
+                android:text="(167)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_moi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/gray_light"
+                android:fontFamily="sans-serif-black"
+                android:textSize="15sp"
+                android:padding="0dp"
+                android:text="Mới" />
+
+            <Button
+                android:id="@+id/btn_cu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/gray_deep"
+                android:textSize="15sp"
+                android:padding="0dp"
+                android:fontFamily="sans-serif-black"
+
+                android:text="Cũ" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/ll_header"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="8dp"
+        >
+
+        <!-- EditText for input -->
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Viết bình luận ... "
+            android:drawableStart="@drawable/ic_gear"
+            android:drawableTint="@color/white"
+            android:drawablePadding="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="textMultiLine|text" />
+
+        <!-- Send button on the right -->
+        <ImageButton
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_forward_arrow"
+            android:contentDescription="nút gửi"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginStart="8dp"
+            app:tint="@color/white" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_binhluan"
+        android:background="@color/gray_deep"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_below="@+id/ll_footer"
+        android:layout_height="wrap_content" />
+
+
+
+
+</RelativeLayout>

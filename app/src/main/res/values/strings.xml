@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BookApp1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="story_text">
+    Trong một vương quốc xa xôi, công chúa Mira luôn mơ ước khám phá thế giới bên ngoài cung điện.\n\n
+    Một ngày nọ, cô quyết định trốn khỏi nơi ở an toàn và bắt đầu cuộc phiêu lưu của mình.\n\n
+    Trong hành trình, Mira gặp gỡ nhiều người bạn và đối mặt với những thử thách, như vượt qua rừng rậm và chiến đấu với một con rồng hung dữ.\n\n
+    Cuối cùng, với sự giúp đỡ của bạn bè, Mira không chỉ đánh bại con rồng mà còn khám phá ra sức mạnh bên trong mình.\n\n
+    Khi trở về vương quốc, cô chia sẻ những bài học quý giá về tình bạn và sự kiên trì, trở thành một vị vua tốt hơn.
+    </string>
+    <string name="comment">
+    Cuối cùng, với sự giúp đỡ của bạn bè, Mira không chỉ đánh bại con rồng mà còn khám phá ra sức mạnh bên trong mình.\n
+    Khi trở về vương quốc, cô chia sẻ những bài học quý giá về tình bạn và sự kiên trì, trở thành một vị vua tốt hơn.
+    </string>
+    <string name="story">ự nghiệp, Ronaldo đã khẳng định mình là một trong những cầu thủ bóng đá vĩ đại nhất lịch sử, đồng thời trở thành hình mẫu của sự thành công thông qua nỗ lực và đam mê.
+    </string>
+
+</resources>
+

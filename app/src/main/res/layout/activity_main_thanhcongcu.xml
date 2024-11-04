@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_deep"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_above="@id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+        <LinearLayout
+            android:background="@color/gray_deep"
+            android:id="@+id/ll_footer"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:paddingVertical="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4"> <!-- Tổng weight là 4 cho 4 LinearLayout con -->
+
+                <!-- Cột 1 -->
+                <LinearLayout
+                    android:id="@+id/btn_tutruyen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/icon_tutruyen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_book" />
+
+                    <TextView
+                        android:id="@+id/text_tutruyen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tủ Truyện"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+                <!-- Cột 2 -->
+                <LinearLayout
+                    android:id="@+id/btn_khampha"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/icon_khampha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_compass" />
+
+                    <TextView
+                        android:id="@+id/text_khampha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khám Phá"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- Cột 3 -->
+                <LinearLayout
+                    android:id="@+id/btn_xephang"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/icon_xephang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_star" />
+
+                    <TextView
+                        android:id="@+id/text_xephang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Xếp Hạng"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- Cột 4 -->
+                <LinearLayout
+                    android:id="@+id/btn_taikhoan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/icon_taikhoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_account" />
+
+                    <TextView
+                        android:id="@+id/text_taikhoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tài Khoản"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

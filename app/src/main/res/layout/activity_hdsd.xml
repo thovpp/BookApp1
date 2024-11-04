@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey2"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_back_arrow"></ImageButton>
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/guideTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Hướng Dẫn Sử Dụng"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <!-- Nội dung hướng dẫn -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="ExtraText">
+
+            <TextView
+                android:id="@+id/guideContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey3"
+                android:padding="10dp"
+                android:text="1. Để bắt đầu, mở ứng dụng và đăng nhập vào tài khoản của bạn.\n\n2. Từ màn hình chính, bạn có thể tìm kiếm sách theo tên hoặc thể loại.\n\n3. Nhấn vào sách để xem thông tin chi tiết và bắt đầu đọc.\n\n4. Bạn có thể thêm sách vào danh sách yêu thích hoặc tải về để đọc offline.\n\n5. Để liên hệ với bộ phận hỗ trợ, hãy vào phần Cài đặt và chọn Hỗ trợ."
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Nút quay lại -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#97EB34"
+        android:text="Quay lại"
+        android:textSize="18sp" />
+</LinearLayout>

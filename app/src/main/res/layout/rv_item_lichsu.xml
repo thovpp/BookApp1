@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/iv_lichsu_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/background_novel_2" />
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_lichsu_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textSize="16sp"
+                android:text="Tại Đại Kết Cục Lại Xuyên Qua Thành Chung Cực Đại"
+                android:textColor="@color/white" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="top"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Đã đọc: "
+        android:textColor="@color/gray_light"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/tv_lichsu_currentchapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="111"
+        android:textColor="@color/gray_light"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="/"
+        android:textColor="@color/gray_light"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/tv_lichsu_totalchapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="120"
+        android:textColor="@color/gray_light"
+        android:textSize="14sp" />
+</LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_lichsu_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="Tu tiên"
+                android:textColor="@color/gray_light" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="Go to Settings"
+            app:srcCompat="@drawable/icon_6dots" />
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="Go to Settings"
+            app:srcCompat="@drawable/ic_delete"
+            app:tint="@color/red" />
+    </LinearLayout>
+
+
+</LinearLayout>
+

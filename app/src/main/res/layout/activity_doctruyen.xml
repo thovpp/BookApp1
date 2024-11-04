@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/background_chapter"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center|top">
+
+        <ImageButton
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_alignParentStart="true"
+            android:contentDescription="nút quay về"
+            android:padding="0dp"
+            android:rotation="180"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_forward_arrow"
+            app:tint="@color/text_chapter" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="50dp"
+            android:layout_alignStart="@+id/iv_back"
+            android:layout_alignEnd="@+id/ib_setting"
+            android:textColor="@color/text_chapter"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:text="Chương 1: Huyết Vân Kiếm - Huyền Thoại Bắt Đầu"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="nút setting"
+            app:srcCompat="@drawable/ic_gear"
+            app:tint="@color/text_chapter" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header"
+        android:layout_above="@+id/rl_footer"
+        android:fillViewport="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:padding="10dp"
+            android:text="@string/story"
+            android:textColor="@color/text_chapter"
+            android:textSize="16sp" />
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_previousChapter"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/gray"
+            android:layout_alignParentStart="true"
+            android:drawableLeft="@drawable/ic_back_arrow"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_vertical|start"
+            android:text="Trước"
+            android:paddingVertical="0dp"
+            android:paddingHorizontal="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"/>
+        <Button
+            android:id="@+id/btn_chapterSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btn_nextChapter"
+            android:layout_toEndOf="@+id/btn_previousChapter"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/blue"
+            android:text="Select Chapter"
+            android:textColor="@android:color/white"
+            android:clickable="true"/>
+    <Button
+            android:id="@+id/btn_nextChapter"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/gray"
+            android:drawableEnd="@drawable/ic_forward_arrow"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_vertical|end"
+            android:text="Sau"
+        android:paddingVertical="0dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

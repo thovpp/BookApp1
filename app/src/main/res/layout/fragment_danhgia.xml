@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="Đánh giá"
+               />
+
+            <TextView
+                android:id="@+id/tv_numberOfRating"
+                android:fontFamily="sans-serif-black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_light"
+                android:textSize="18sp"
+                android:text="(167)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+android:gravity="center"
+            android:paddingVertical="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_moi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/gray_light"
+                android:fontFamily="sans-serif-black"
+                android:textSize="15sp"
+                android:padding="0dp"
+                android:text="Mới" />
+
+            <Button
+                android:id="@+id/btn_cu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/gray_deep"
+                android:textSize="15sp"
+                android:padding="0dp"
+                android:fontFamily="sans-serif-black"
+
+                android:text="Cũ" />
+
+            <Button
+                android:id="@+id/btn_thich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:backgroundTint="@color/gray_deep"
+
+                android:textSize="15sp"
+                android:padding="0dp"
+                android:fontFamily="sans-serif-black"
+
+                android:text="Thích" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_danhgia"
+        android:background="@color/gray_deep"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
