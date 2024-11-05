@@ -42,9 +42,9 @@ public class ChapterActivity extends AppCompatActivity {
         ivBack.setOnClickListener(v -> finish());
         Button btnPrevious = findViewById(R.id.btn_previousChapter);
         Button btnNext = findViewById(R.id.btn_nextChapter);
-        ImageButton btnSetting = findViewById(R.id.btn_setting);
         btnPrevious.setOnClickListener(v -> loadPreviousChapter());
         btnNext.setOnClickListener(v -> loadNextChapter());
+        ImageButton btnSetting = findViewById(R.id.btn_setting);
         btnSetting.setOnClickListener(v -> showSettingsDialog());
         // Nạp dữ liệu vô
         chapters = initializeChapters();

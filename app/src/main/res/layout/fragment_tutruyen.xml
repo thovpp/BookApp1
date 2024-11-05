@@ -32,19 +32,12 @@
 
             <EditText
                 android:paddingLeft="10dp"
-                android:layout_width="250dp"
+                android:layout_width="280dp"
                 android:layout_height="match_parent"
                 android:hint="Tìm kiếm truyện..."
                 android:drawableEnd="@drawable/ic_search"
                 style="@style/CustomSearchView" />
-            <ImageButton
-                android:id="@+id/Sett_button"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:backgroundTint="@android:color/transparent"
-                android:contentDescription="Go to Settings"
-                app:srcCompat="@drawable/ic_gear" />
+
         </LinearLayout>
 
     </FrameLayout>
@@ -95,13 +88,6 @@
         </LinearLayout>
 
 
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"></LinearLayout>
 
     </LinearLayout>
 

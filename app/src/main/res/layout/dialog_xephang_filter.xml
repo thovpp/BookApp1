@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/grey2"
+    android:layout_height="wrap_content">
+
+    <!-- ScrollView for the main content, making it scrollable -->
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!-- Mục 1: Loại -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey2"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Loại Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Loại:"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- RadioGroup for Loai (using GridLayout for 2 items per row) -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioSangTac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sáng Tác"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioDichThuat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dịch Thuật"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <!-- Mục 2: Sắp Xếp (Sorting Section) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey2"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Sắp Xếp Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Sắp Xếp:"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- GridLayout for Sorting Options (2 items per row) -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioChuong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chương"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioTen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioMoiDang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mới Đăng"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioBinhLuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bình Luận"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <!-- Mục 3: Thể Loại (Genres Section) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey2"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Thể Loại Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Thể Loại:"
+                    android:textColor="#F2EDED"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- GridLayout for Thể Loại (Genres) (2 items per row) -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp">
+
+                    <CheckBox
+                        android:id="@+id/checkboxManhua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manhua"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxTuTien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tu Tiên"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxKinhDi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kinh Dị"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxHai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hài"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxTinhCam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tình Cảm"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxVienTuong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Viễn Tưởng"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Action"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxFantasy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fantasy"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxAdventure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adventure"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxRomance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Romance"
+                        android:textColor="#F2EDED"
+                        android:textSize="18sp" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gửi"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="20sp"
+         />
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:layout_marginHorizontal="10dp"
+
+            android:textSize="20sp"
+           />
+    </LinearLayout>
+    <!-- Filter Button -->
+
+
+</FrameLayout>
