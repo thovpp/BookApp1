@@ -124,6 +124,31 @@
                     android:textColor="@color/white"
                     android:textSize="20dp" />
             </FrameLayout>
+            <FrameLayout
+                android:id="@+id/btn_User"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="@color/grey2"
+
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_turnoff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="User(delete later)"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </FrameLayout>
             <!-- Add other sections as necessary -->
 
         </LinearLayout>

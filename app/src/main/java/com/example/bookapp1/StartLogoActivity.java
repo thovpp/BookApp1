@@ -18,7 +18,7 @@ public class StartLogoActivity extends AppCompatActivity {
         // Set a delay for the splash screen
         new Handler().postDelayed(() -> {
             // Start the main activity after the delay
-            Intent intent = new Intent(StartLogoActivity.this, AdminActivity.class);
+            Intent intent = new Intent(StartLogoActivity.this, MainActivity.class);
             startActivity(intent);
             finish(); // Finish the splash activity so the user can't go back to it
         }, 2000); // 2000 milliseconds (2 seconds)

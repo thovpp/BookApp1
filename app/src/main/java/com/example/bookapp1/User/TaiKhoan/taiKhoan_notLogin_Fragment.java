@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.bookapp1.Admin.AdminActivity;
 import com.example.bookapp1.LoginActivity;
 import com.example.bookapp1.R;
 
@@ -21,6 +22,15 @@ public class taiKhoan_notLogin_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_taikhoan_notlogin, container, false);
+
+        FrameLayout btn_admin = view.findViewById(R.id.btn_movetoAdminforTest);
+        btn_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AdminActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnLogout = view.findViewById(R.id.btn_logout);
 

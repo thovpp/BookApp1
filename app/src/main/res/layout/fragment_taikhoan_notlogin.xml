@@ -172,5 +172,30 @@
                 android:textColor="@color/white"
                 android:textSize="20dp" />
         </FrameLayout>
+        <FrameLayout
+            android:id="@+id/btn_movetoAdminforTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/gray">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:backgroundTint="@android:color/transparent"
+                app:srcCompat="@drawable/ic_forward_arrow" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="Admin (delete later)"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </FrameLayout>
     </LinearLayout>
 </RelativeLayout>

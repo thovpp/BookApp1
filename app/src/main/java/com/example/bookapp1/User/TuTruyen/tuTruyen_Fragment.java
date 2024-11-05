@@ -19,7 +19,7 @@ import androidx.annotation.Nullable; // Import for Nullable
 import com.example.bookapp1.DTOs.BaseItem;
 import com.example.bookapp1.DTOs.RvItem_History;
 import com.example.bookapp1.Novel.NovelActivity;
-import com.example.bookapp1.Novel_Add_Edit_Activity;
+import com.example.bookapp1.Admin.NovelManagement.Novel_Add_Edit_Activity;
 import com.example.bookapp1.R;
 import com.example.bookapp1.User.MainAdapter;
 import com.example.bookapp1.Database.DatabaseHelper;

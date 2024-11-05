@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B2D30"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="left"
+            android:rotation="180"
+            android:padding="0dp"
+            android:backgroundTint="@android:color/transparent"
+            android:rotationY="180"
+            android:src="@drawable/ic_back_arrow" />
+
+        <!-- Add Novel Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cập Nhật Truyện"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Novel Title Input -->
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#36393A"
+            android:text="Ta là Tiên đế"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF" />
+
+        <!-- Author Input -->
+        <EditText
+            android:id="@+id/authorEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#36393A"
+            android:text="Phong Khởi"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF" />
+
+        <!-- Category Input -->
+        <EditText
+            android:id="@+id/categoryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#36393A"
+            android:text="Tu Chân"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF" />
+
+        <!-- Choose Image Button -->
+        <Button
+            style="@style/Widget.MaterialComponents.Button"
+            android:id="@+id/chooseImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn Ảnh Bìa"
+            android:drawableEnd="@drawable/ic_camera"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Thumbnail Image Preview -->
+        <ImageView
+            android:id="@+id/thumbnailImageView"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_novel_2"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Total Chapters Input -->
+        <EditText
+            android:id="@+id/totalChaptersEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#36393A"
+            android:text="1000 chương"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:inputType="number"
+            android:textColorHint="#FFFFFF" />
+
+        <!-- Summary Input -->
+        <EditText
+            android:id="@+id/summaryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#36393A"
+            android:text="Câu chuyện hướng về as và sự tích cực"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top" />
+
+        <!-- Content Input -->
+        <EditText
+            android:id="@+id/contentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#36393A"
+            android:text="Hắn đứng trước đại dương vô biên, ánh sáng từ linh khí thiên địa chói rọi, quyết tâm bước vào con đường tu luyện vô tận, nơi mà chỉ có những ai dám chiến đấu với số mệnh mới có thể đạt được cảnh giới của thần tiên."
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:gravity="top" />
+
+        <!-- Add Novel Button -->
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/blue"
+            android:text="Lưu Cập Nhật"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

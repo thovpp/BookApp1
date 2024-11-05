@@ -1,7 +1,6 @@
 package com.example.bookapp1.Admin.NovelManagement;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,15 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.SearchView;
-import android.widget.TextView;
 
 import com.example.bookapp1.DTOs.BaseItem;
-import com.example.bookapp1.DTOs.RvItem_Novel_3Detail;
 import com.example.bookapp1.DTOs.RvItem_QuanliSach;
-import com.example.bookapp1.Novel.MyAdapter;
-import com.example.bookapp1.Novel_Add_Edit_Activity;
 import com.example.bookapp1.R;
 
 import java.util.ArrayList;
@@ -30,6 +23,7 @@ public class QuanLiSach_Fragment extends Fragment {
     private RecyclerView rV_quanlisach;
     private QuanLiSach_Adapter adapterDanhSachTruyen;
     private List<BaseItem> itemListTruyen;
+    Button btn_addNovel;
     private static final int REQUEST_CODE_ADD_NOVEL = 1; // Request code for adding novels
     private static final int REQUEST_CODE_EDIT_NOVEL = 2; // Request code for editing novels
     // Static method to create new instance with content
@@ -61,7 +55,7 @@ public class QuanLiSach_Fragment extends Fragment {
         rV_quanlisach.setAdapter(adapterDanhSachTruyen);
 
 
-       Button btn_addNovel = view.findViewById(R.id.btn_themsach);
+        btn_addNovel = view.findViewById(R.id.btn_themsach);
         btn_addNovel.setOnClickListener(v -> {
             Intent intent = new Intent(requireActivity(), Novel_Add_Edit_Activity.class);
             startActivityForResult(intent, REQUEST_CODE_ADD_NOVEL); // Start activity for result

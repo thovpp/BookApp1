@@ -1,4 +1,4 @@
-package com.example.bookapp1;
+package com.example.bookapp1.Admin.NovelManagement;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,16 +11,16 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bookapp1.Database.DatabaseHelper;
 import com.example.bookapp1.Models.Novel;
+import com.example.bookapp1.R;
 
-public class Novel_Add_Edit_Activity extends AppCompatActivity {
+public class Novel_Edit_Activity extends AppCompatActivity {
     private EditText titleEditText, authorEditText, categoryEditText, totalChaptersEditText, summaryEditText, contentEditText;
-    private Button addNovelButton, chooseImageButton;
+    private Button editNovelButton, chooseImageButton;
     ImageButton backButton;
     private ImageView thumbnailImageView;
     private DatabaseHelper dbHelper;
@@ -30,7 +30,7 @@ public class Novel_Add_Edit_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_novel_add_edit);
+        setContentView(R.layout.activity_novel_edit);
 
         dbHelper = DatabaseHelper.getInstance(this);
 
@@ -41,14 +41,12 @@ public class Novel_Add_Edit_Activity extends AppCompatActivity {
         summaryEditText = findViewById(R.id.summaryEditText);
         contentEditText = findViewById(R.id.contentEditText); // New field
         thumbnailImageView = findViewById(R.id.thumbnailImageView);
-        addNovelButton = findViewById(R.id.addNovelButton);
+        editNovelButton = findViewById(R.id.btn_edit);
         chooseImageButton = findViewById(R.id.chooseImageButton);
         backButton = findViewById(R.id.ib_back);
 
         backButton.setOnClickListener(v -> finish());
         chooseImageButton.setOnClickListener(v -> openImageChooser());
-
-        addNovelButton.setOnClickListener(v -> addNovelToDatabase());
     }
 
     private void openImageChooser() {
@@ -69,38 +67,4 @@ public class Novel_Add_Edit_Activity extends AppCompatActivity {
         }
     }
 
-    private void addNovelToDatabase() {
-        String title = titleEditText.getText().toString().trim();
-        String author = authorEditText.getText().toString().trim();
-        String category = categoryEditText.getText().toString().trim();
-        String totalChaptersStr = totalChaptersEditText.getText().toString().trim();
-        String summary = summaryEditText.getText().toString().trim();
-        String content = contentEditText.getText().toString().trim(); // Get content
-
-        if (title.isEmpty() || author.isEmpty() || category.isEmpty() || totalChaptersStr.isEmpty() || imageUri == null || content.isEmpty()) {
-            Toast.makeText(this, "Please fill in all required fields", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        int totalChapters;
-        try {
-            totalChapters = Integer.parseInt(totalChaptersStr);
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid number of chapters", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // Create a new Novel instance with the content
-        Novel novel = new Novel(0, title, author, category, totalChapters, imageUri.toString(), summary, content, 1);
-
-        boolean isAdded = dbHelper.addNovel(novel);
-        Log.d("Novel_Add_Edit_Activity", "Image URI: " + imageUri);
-        if (isAdded) {
-            Toast.makeText(this, "Novel added successfully", Toast.LENGTH_SHORT).show();
-            setResult(RESULT_OK);
-            finish();
-        } else {
-            Toast.makeText(this, "Failed to add novel", Toast.LENGTH_SHORT).show();
-        }
-    }
 }

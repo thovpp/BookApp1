@@ -1,6 +1,5 @@
 package com.example.bookapp1.Admin.UserManagement;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,14 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
-import com.example.bookapp1.Admin.NovelManagement.QuanLiSach_Adapter;
-import com.example.bookapp1.Admin.NovelManagement.QuanLiSach_Fragment;
-import com.example.bookapp1.DTOs.BaseItem;
-import com.example.bookapp1.DTOs.RvItem_QuanliSach;
 import com.example.bookapp1.Models.Reader;
-import com.example.bookapp1.Novel_Add_Edit_Activity;
 import com.example.bookapp1.R;
 
 import java.util.ArrayList;
