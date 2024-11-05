@@ -1,18 +1,27 @@
 package com.example.bookapp1.User.KhamPha;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.bookapp1.DTOs.BaseItem;
+import com.example.bookapp1.Database.DatabaseHelper;
+import com.example.bookapp1.Models.Novel;
 import com.example.bookapp1.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class khamPha_Fragment extends Fragment {
@@ -29,60 +38,119 @@ public class khamPha_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_khampha, container, false);
 
         // Initialize RecyclerView
-        rv_Banner = view.findViewById(R.id.rv_main_banner);
-        rv_Moidang = view.findViewById(R.id.rv_main_moidang);
         rv_Capnhat = view.findViewById(R.id.rv_main_capnhat);
+        rv_Capnhat.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        rv_Moidang = view.findViewById(R.id.rv_main_moidang);
+        rv_Banner = view.findViewById(R.id.rv_main_banner);
 
-        LinearLayoutManager layoutManagerBanner = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false);
-        LinearLayoutManager layoutManagerMoidang = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        LinearLayoutManager layoutManagerCapnhat = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        if (rv_Capnhat == null || rv_Moidang == null || rv_Banner == null) {
+            Log.e("khamPha_Fragment", "RecyclerView initialization failed. Check your XML layout IDs.");
+            return view;
+        }
 
-        rv_Banner.setLayoutManager(layoutManagerBanner);
-        rv_Moidang.setLayoutManager(layoutManagerMoidang);
-        rv_Capnhat.setLayoutManager(layoutManagerCapnhat);
+        // Set LayoutManagers
+        rv_Capnhat.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        rv_Moidang.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        rv_Banner.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
-        // Sample data for RecyclerView_Banner
+
+        // Load and display random novels
+        loadLatestNovels();
+        loadRandomNovels();
+        loadBannerItems();
+
+
+        if (adapterBanner != null) {
+            startAutoScroll();
+        } else {
+            Log.e("khamPha_Fragment", "adapterBanner is null. Ensure banner items are loaded correctly.");
+        }
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        // Call displayRandomNovel after the view is fully created
+        displayRandomNovel();
+    }
+
+    private void loadBannerItems() {
+        // Create some dummy banner items or fetch them as needed
         itemListBn = new ArrayList<>();
-        itemListBn.add(new RvItem_Banner(R.drawable.vitasprakle));
         itemListBn.add(new RvItem_Banner(R.drawable.bright_anime_manga_eyes_with_stars));
+        itemListBn.add(new RvItem_Banner(R.drawable.background_novel_1));
+        itemListBn.add(new RvItem_Banner(R.drawable.emon));
 
-        // Sample data for RecyclerView_Capnhat
-        itemListCapnhat = new ArrayList<>();
-        itemListCapnhat.add(new RvItem_Capnhat("Tất cả tại hoàng hậu làm đó!", "Hài hước| Xuyên không", "251", R.drawable.hoang_hau_vo_duc));
-        itemListCapnhat.add(new RvItem_Capnhat("Truyện Kiếm Hiệp", "Huyền ảo", "150", R.drawable.kiemhiep));
-        itemListCapnhat.add(new RvItem_Capnhat("Hành Trình Vô Tận", "Phiêu lưu", "347", R.drawable.bulubala));
-        itemListCapnhat.add(new RvItem_Capnhat("Vũ Trụ Bất Tận", "Khám phá", "18", R.drawable.images));
-        itemListCapnhat.add(new RvItem_Capnhat("Phu nhân và Hầu Tước", "Đời thường", "500", R.drawable.hautuoc));
-        itemListCapnhat.add(new RvItem_Capnhat("Dưới ánh trăng", "BL| Cổ trang", "745", R.drawable.ehehe));
-        itemListCapnhat.add(new RvItem_Capnhat("Học sinh thứ 10", "Huyền ảo| Action", "321", R.drawable.rere));
+        // Initialize adapterBanner with itemListBn
+        adapterBanner = new bmAdapter(itemListBn);
+        rv_Banner.setAdapter(adapterBanner);
+    }
 
-        // Sample data for RecyclerView_Moidang
+    private void displayRandomNovel() {
+        Novel randomNovel = DatabaseHelper.getInstance(getContext()).getRandomNovel();
+
+        if (randomNovel != null) {
+            // Find views
+            TextView txtTheLoai = getView().findViewById(R.id.txt_main_rec_theloai);
+            TextView txtTieuDe = getView().findViewById(R.id.txt_main_rec_tieude);
+            ImageView ivMainRec = getView().findViewById(R.id.iv_main_rec);
+
+            // Set text details
+            txtTheLoai.setText(randomNovel.getCategory()); // Set category as genre
+            txtTieuDe.setText(randomNovel.getTitle());     // Set title
+
+            // Load image with Glide
+            Glide.with(this)
+                    .load(randomNovel.getThumbnailUri()) // Assuming thumbnail is a file path
+                    .placeholder(R.drawable.background_novel_1) // Placeholder image
+                    .error(R.drawable._logo) // Error image if loading fails
+                    .into(ivMainRec);
+        }
+    }
+
+    private void loadLatestNovels() {
+        // Fetch the latest novels (e.g., top 5 latest novels)
+        List<Novel> latestNovels = DatabaseHelper.getInstance(getContext()).loadLatestNovels(5);
+
+        // Convert to BaseItem list for the adapter
         itemListMoidang = new ArrayList<>();
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.bulubala));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.hoang_hau_vo_duc));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.kiemhiep));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.rere));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.nhinnguoidangsau));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.nutongtai));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.ehehe));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.hautuoc));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.images));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.emon));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.rereer));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.thinhan));
-        itemListMoidang.add(new RvItem_Moidang(R.drawable.tinhcum));
+        for (Novel novel : latestNovels) {
+            itemListMoidang.add(new RvItem_Moidang(
+                    novel.getThumbnailUri() // Pass the thumbnail file path directly
+            ));
+        }
 
         // Set up adapter
-        adapterBanner = new bmAdapter(itemListBn);
         adapterMoidang = new bmAdapter(itemListMoidang);
-        adapterCapnhat = new bmAdapter(itemListCapnhat);
-        rv_Banner.setAdapter(adapterBanner);
         rv_Moidang.setAdapter(adapterMoidang);
-        rv_Capnhat.setAdapter(adapterCapnhat);
+    }
 
-        // Start auto-scrolling for both RecyclerViews
-        startAutoScroll();
-        return view; // Fixed missing semicolon
+    private void loadRandomNovels() {
+        // Fetch all novels
+        List<Novel> allNovels = DatabaseHelper.getInstance(getContext()).getAllNovels();
+
+        // Shuffle the list for random order
+        Collections.shuffle(allNovels);
+
+        // Take a subset if you only want to display a few (e.g., top 5)
+        List<Novel> randomNovels = allNovels.size() > 5 ? allNovels.subList(0, 5) : allNovels;
+
+        // Convert to BaseItem list for the adapter
+        itemListCapnhat = new ArrayList<>();
+        for (Novel novel : randomNovels) {
+            itemListCapnhat.add(new RvItem_Capnhat(
+                    novel.getTitle(),
+                    novel.getCategory(),
+                    String.valueOf(novel.getTotalChapters()),
+                    novel.getThumbnailUri() // Pass the thumbnail path directly
+            ));
+        }
+
+        // Set up adapter
+        adapterCapnhat = new bmAdapter(itemListCapnhat);
+        rv_Capnhat.setAdapter(adapterCapnhat);
     }
 
     private void startAutoScroll() {

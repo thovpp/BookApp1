@@ -1,16 +1,27 @@
 package com.example.bookapp1.DTOs;
 
 public class RvItem_QuanliSach  extends BaseItem {
+
+    private int id;
     private String title;
     private String tacGia;
-    private int thumb;
+    private String thumb;
     private int tongSoChuong;  // Thêm thể loại
 
-    public RvItem_QuanliSach(String title, String tacGia, int thumb, int tongSoChuong) {
+    public RvItem_QuanliSach(int id, String title, String tacGia, String thumb, int tongSoChuong) {
+        this.id = id;
         this.title = title;
         this.tacGia = tacGia;
         this.thumb = thumb;
         this.tongSoChuong = tongSoChuong;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -29,11 +40,11 @@ public class RvItem_QuanliSach  extends BaseItem {
         this.tacGia = tacGia;
     }
 
-    public int getThumb() {
+    public String getThumb() {
         return thumb;
     }
 
-    public void setThumb(int thumb) {
+    public void setThumb(String thumb) {
         this.thumb = thumb;
     }
 
@@ -49,4 +60,6 @@ public class RvItem_QuanliSach  extends BaseItem {
     public String getTitles() {
         return "";
     }
+
+
 }

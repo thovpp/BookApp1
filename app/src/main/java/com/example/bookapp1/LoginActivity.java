@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.bookapp1.Admin.AdminActivity;
 import com.example.bookapp1.User.MainActivity;
 import com.example.bookapp1.Database.DatabaseHelper;
 import com.example.bookapp1.Models.Reader;
@@ -60,7 +61,20 @@ public class LoginActivity extends AppCompatActivity {
         try {
             Reader reader = dbHelper.loginReader(email, password);
             if (reader != null) {
-                Log.d("LoginActivity", "Login successful, redirecting to MainActivity.");
+                Log.d("LoginActivity", "Login successful.");
+                Log.d("LoginActivity", "User role: " + reader.getRole());
+                // Check the user's role
+                if ("Admin".equals(reader.getRole())) {
+                    Log.d("LoginActivity", "User is an Admin, redirecting to AdminActivity.");
+                    Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                    startActivity(intent);
+                } else {
+                    Log.d("LoginActivity", "User is not an Admin, redirecting to MainActivity.");
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+
+                // Show login success message
                 Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
 
                 // Save login status and user information in SharedPreferences
@@ -70,11 +84,12 @@ public class LoginActivity extends AppCompatActivity {
                 editor.putInt("reader_id", reader.getReaderId()); // Save the reader_id
                 editor.putString("email", reader.getEmail()); // Save email
                 editor.putString("phone", reader.getPhone()); // Save phone
+                editor.putString("role", reader.getRole()); // Save role
                 editor.apply();
 
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                // Finish LoginActivity after redirecting
                 finish();
+
             } else {
                 Log.d("LoginActivity", "Login failed, staying on LoginActivity.");
                 Toast.makeText(this, "Email hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
@@ -85,6 +100,8 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Có lỗi xảy ra, vui lòng thử lại sau.", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
     private void clearInputs() {
         emailEditText.setText("");

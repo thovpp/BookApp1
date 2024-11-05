@@ -31,6 +31,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/searchEditText"
                 android:paddingLeft="10dp"
                 android:layout_width="280dp"
                 android:layout_height="match_parent"
@@ -57,33 +58,6 @@
             android:layout_weight="1"
             android:gravity="center|center_horizontal|center_vertical"
             android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_addNovel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/gray"
-                android:padding="0dp"
-                android:text="Thêm Truyện" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/gray"
-                android:padding="0dp"
-                android:text="Bookmarks" />
-
-            <Button
-                android:id="@+id/get_all_novel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/gray"
-                android:padding="0dp"
-                android:text="Show Novels" />
 
         </LinearLayout>
 

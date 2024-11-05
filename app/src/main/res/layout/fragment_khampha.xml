@@ -129,7 +129,7 @@ android:layout_height="wrap_content">
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center_vertical"
                 android:layout_marginLeft="20dp"
-                android:text="Mới nhất ( sắp theo thời gian)"
+                android:text="Mới nhất "
                 android:textColor="#E7E7E7"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -177,7 +177,7 @@ android:layout_height="wrap_content">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="Ở đây tới đó ông để random truyện vô là đc "
+                android:text=""
                 android:textColor="#FDFDFD" />
 
         </LinearLayout>
@@ -246,7 +246,7 @@ android:layout_height="wrap_content">
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginLeft="20dp"
-                android:text="Có thể bạn sẽ thích ( để truyện random vô là đc)"
+                android:text="Có thể bạn sẽ thích"
                 android:textColor="#E7E7E7"
                 android:textSize="16sp"
                 android:textStyle="bold" />

@@ -116,16 +116,7 @@
             android:backgroundTint="@android:color/transparent"
             android:contentDescription="Go to Settings"
             app:srcCompat="@drawable/icon_6dots" />
-        <ImageButton
-            android:id="@+id/btn_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:layout_gravity="bottom"
-            android:backgroundTint="@android:color/transparent"
-            android:contentDescription="Go to Settings"
-            app:srcCompat="@drawable/ic_delete"
-            app:tint="@color/red" />
+
     </LinearLayout>
 
 

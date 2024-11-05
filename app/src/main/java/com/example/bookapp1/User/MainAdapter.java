@@ -96,11 +96,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                     .into(((LichSuViewHolder) holder).thumb);
 
             // Set delete button click listener
-            ((LichSuViewHolder) holder).btn_delete.setOnClickListener(v -> {
-                if (deleteClickListener != null) {
-                    deleteClickListener.onItemDelete(detail_item.getID()); // Pass the ID to the listener
-                }
-            });
+
         }
     }
 
@@ -112,7 +108,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         TextView totalChapter;
         TextView category;
         ImageView thumb;
-        ImageButton btn_delete;
         ImageButton btn_edit; // Declare edit button
         public LichSuViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -121,7 +116,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             currentChapter = itemView.findViewById(R.id.tv_lichsu_currentchapter);
             totalChapter = itemView.findViewById(R.id.tv_lichsu_totalchapter);
             thumb = itemView.findViewById(R.id.iv_lichsu_thumb);
-            btn_delete = itemView.findViewById(R.id.btn_delete);
+
             btn_edit = itemView.findViewById(R.id.btn_setting);
         }
     }

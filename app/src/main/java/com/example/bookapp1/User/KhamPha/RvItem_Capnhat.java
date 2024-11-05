@@ -7,9 +7,9 @@ public class RvItem_Capnhat extends BaseItem {
     private String tieude;
     private String theloai;
     private String luotxem;
-    private int thumbnail;
+    private String thumbnail;
 
-    public RvItem_Capnhat(String tieude, String theloai, String luotxem, int thumbnail) {
+    public RvItem_Capnhat(String tieude, String theloai, String luotxem, String thumbnail) {
         this.tieude = tieude;
         this.theloai = theloai;
         this.luotxem = luotxem;
@@ -40,11 +40,11 @@ public class RvItem_Capnhat extends BaseItem {
         this.luotxem = luotxem;
     }
 
-    public int getThumbnail() {
+    public String getThumbnail() {
         return thumbnail;
     }
 
-    public void setThumbnail(int thumbnail) {
+    public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }
 

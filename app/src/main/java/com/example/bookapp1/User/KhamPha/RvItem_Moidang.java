@@ -3,17 +3,19 @@ package com.example.bookapp1.User.KhamPha;
 import com.example.bookapp1.DTOs.BaseItem;
 
 public class RvItem_Moidang extends BaseItem {
-    private int thumbnail;
+    private String thumbnail;
 
-    public RvItem_Moidang(int thumbnail) {
+
+    public RvItem_Moidang(String thumbnail) {
         this.thumbnail = thumbnail;
     }
 
-    public int getThumbnail() {
+
+    public String getThumbnail() {
         return thumbnail;
     }
 
-    public void setThumbnail(int thumbnail) {
+    public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }
 

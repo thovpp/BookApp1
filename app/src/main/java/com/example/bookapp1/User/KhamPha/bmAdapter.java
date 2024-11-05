@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.bookapp1.DTOs.BaseItem;
 import com.example.bookapp1.R;
 
@@ -26,9 +27,13 @@ public class bmAdapter extends RecyclerView.Adapter<bmAdapter.ViewHolder> {
     @Override
     public int getItemViewType(int position) {
         if (itemList != null && position < itemList.size()) {
-            if (itemList.get(position) instanceof RvItem_Banner) {return 0;}
-            else if (itemList.get(position) instanceof RvItem_Moidang) {return 1;}
-            else if (itemList.get(position) instanceof RvItem_Capnhat) {return 2;}
+            if (itemList.get(position) instanceof RvItem_Banner) {
+                return 0;
+            } else if (itemList.get(position) instanceof RvItem_Moidang) {
+                return 1;
+            } else if (itemList.get(position) instanceof RvItem_Capnhat) {
+                return 2;
+            }
         }
 
         return -1; // Mặc định
@@ -56,20 +61,30 @@ public class bmAdapter extends RecyclerView.Adapter<bmAdapter.ViewHolder> {
     }
 
 
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         if (holder instanceof CapnhatViewHolder) {
             RvItem_Capnhat item = (RvItem_Capnhat) itemList.get(position);
             ((CapnhatViewHolder) holder).tieude.setText(item.getTieude());
             ((CapnhatViewHolder) holder).theloai.setText(item.getTheloai());
-            ((CapnhatViewHolder) holder).thumbnail.setImageResource(item.getThumbnail());
             ((CapnhatViewHolder) holder).luotxem.setText(item.getLuotxem());
+
+            // Use Glide to load the thumbnail image from a file path
+            Glide.with(holder.itemView.getContext())
+                    .load(item.getThumbnail()) // `getThumbnail()` should return the file path as a String
+                    .placeholder(R.drawable.background_novel_1) // Optional: Placeholder while loading
+                    .error(R.drawable._logo) // Optional: Error image if loading fails
+                    .into(((CapnhatViewHolder) holder).thumbnail);
         } else if (holder instanceof MoidangViewHolder) {
             RvItem_Moidang item = (RvItem_Moidang) itemList.get(position);
-            ((MoidangViewHolder) holder).thumb.setImageResource(item.getThumbnail());
-        }
-        else if (holder instanceof BannerViewHolder) {
+            // Load image from local file path using Glide
+            Glide.with(holder.itemView.getContext())
+                    .load(item.getThumbnail()) // Local file path for MoidangViewHolder
+                    .placeholder(R.drawable.background_novel_1) // Optional placeholder
+                    .error(R.drawable._logo) // Optional error image
+                    .into(((MoidangViewHolder) holder).thumb);
+
+        } else if (holder instanceof BannerViewHolder) {
             RvItem_Banner item = (RvItem_Banner) itemList.get(position);
             ((BannerViewHolder) holder).banner.setImageResource(item.getBanner());
         }
@@ -91,6 +106,7 @@ public class bmAdapter extends RecyclerView.Adapter<bmAdapter.ViewHolder> {
         TextView theloai;
         TextView luotxem;
         ImageView thumbnail;
+
         public CapnhatViewHolder(@NonNull View itemView) {
             super(itemView);
             tieude = itemView.findViewById(R.id.tv_capnhat_tieude);
@@ -102,6 +118,7 @@ public class bmAdapter extends RecyclerView.Adapter<bmAdapter.ViewHolder> {
 
     public static class MoidangViewHolder extends ViewHolder {
         ImageView thumb;
+
         public MoidangViewHolder(@NonNull View itemView) {
             super(itemView);
             thumb = itemView.findViewById(R.id.iv_moidang_thumbnail);
@@ -110,6 +127,7 @@ public class bmAdapter extends RecyclerView.Adapter<bmAdapter.ViewHolder> {
 
     public static class BannerViewHolder extends ViewHolder {
         ImageView banner;
+
         public BannerViewHolder(@NonNull View itemView) {
             super(itemView);
             banner = itemView.findViewById(R.id.iv_banner_img);

@@ -45,6 +45,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" Đây là tiêu đề của bộ truyệnây là tiêu đề của bộ truyệnĐây là tiêu đề của bộ truyện"
@@ -84,7 +85,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/tv_total"
+                    android:id="@+id/tv_totalchapter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -94,6 +95,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/tv_date"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

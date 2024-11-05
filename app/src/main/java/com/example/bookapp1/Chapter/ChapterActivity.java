@@ -58,116 +58,50 @@ public class ChapterActivity extends AppCompatActivity {
     //Nạp dữ liệu
     private String[][] initializeChapters() {
         return new String[][] {
-                {"1", "Chương 1: Huyết Vân Kiếm - Huyền Thoại Bắt Đầu", "" +
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."+
-                        "Huyết Vân Kiếm khởi đầu một cuộc hành trình vĩ đại, nơi mà những bí mật cổ xưa được khám phá."
-                },
-                {"2", "Chương 2: Thiên Long Bát Bộ - Những Cuộc Chiến Kỳ Diệu", "Cuộc chiến giữa các thế lực Thiên Long mang đến những kỳ diệu không thể tưởng tượng nổi."},
-                {"3", "Chương 3: Bích Huyết Đao - Báu Vật Từ Thế Giới Ngầm", "Bích Huyết Đao chứa đựng sức mạnh vô biên, bí ẩn từ thế giới ngầm chưa từng được tiết lộ."},
-                {"4", "Chương 4: Ngọc Hoàng Thái Cực - Cuộc Hành Trình Mạo Hiểm", "Cuộc hành trình tìm kiếm Ngọc Hoàng Thái Cực bắt đầu, dẫn lối đến những thử thách cam go."},
-                {"5", "Chương 5: Độc Cô Cầu Bại - Sự Trỗi Dậy Của Một Anh Hùng", "Độc Cô Cầu Bại, một anh hùng trỗi dậy từ bóng tối, quyết tâm chiến thắng mọi kẻ thù."},
-                {"6", "Chương 6: Cửu Âm Chân Kinh - Bí Ẩn Từ Vạn Thế", "Cửu Âm Chân Kinh tiết lộ những bí ẩn từ vạn thế, là chìa khóa mở ra sức mạnh tiềm ẩn."},
-                {"7", "Chương 7: Nhất Kiếm Đoạt Hồn - Sát Thủ Trong Đêm", "Nhất Kiếm Đoạt Hồn, sát thủ xuất hiện trong đêm tối, sẵn sàng cho những trận chiến ác liệt."},
-                {"8", "Chương 8: Thiên Nhẫn Đạo - Đối Đầu Với Kẻ Thù", "Thiên Nhẫn Đạo đứng vững trước kẻ thù, bảo vệ những điều tốt đẹp trong thế giới hỗn loạn."},
-                {"9", "Chương 9: Bạch Kinh Nhi - Tình Yêu Và Định Mệnh", "Bạch Kinh Nhi đối diện với định mệnh, tình yêu và hy vọng hòa quyện trong một hành trình."},
-                {"10", "Chương 10: Đại Tạo Hóa - Thế Giới Chưa Từng Khám Phá", "Đại Tạo Hóa khám phá thế giới chưa từng biết, nơi mà những điều kỳ diệu đang chờ đón."},
-                {"11", "Chương 11: Mặc Vân Tiên - Hành Trình Vượt Qua Biển Cả", "Mặc Vân Tiên vượt biển cả, đối mặt với sóng gió và khám phá những vùng đất mới."},
-                {"12", "Chương 12: Huyền Vũ Khai Thiên - Khởi Đầu Một Kỷ Nguyên", "Huyền Vũ khai thiên, khởi đầu một kỷ nguyên mới với nhiều cơ hội và thử thách lớn."},
-                {"13", "Chương 13: Hồ Ly Mị Ảnh - Những Mảnh Ghép Của Tâm Hồn", "Hồ Ly Mị Ảnh, những mảnh ghép tâm hồn kết nối với nhau, tạo nên một câu chuyện kỳ diệu."},
-                {"14", "Chương 14: Tuyệt Thế Thần Thoại - Cuộc Chiến Cuối Cùng", "Tuyệt Thế Thần Thoại mang đến cuộc chiến cuối cùng giữa các thế lực hùng mạnh."},
-                {"15", "Chương 15: Phong Vân Vô Kỵ - Kẻ Bất Khả Chiến Bại", "Phong Vân Vô Kỵ nổi lên như một kẻ bất khả chiến bại, khiến mọi đối thủ khiếp sợ."},
-                {"16", "Chương 16: Kim Long Thần Điện - Nơi Quy Nguyên Lịch Sử", "Kim Long Thần Điện lưu giữ quy nguyên lịch sử, nơi những bí mật được bảo vệ cẩn thận."},
-                {"17", "Chương 17: Lãnh Huyết Kiếm - Con Đường Tìm Kiếm Quyền Lực", "Lãnh Huyết Kiếm dẫn dắt con đường tìm kiếm quyền lực, nơi mà mọi thứ đều có giá."},
-                {"18", "Chương 18: Ngọc Nữ Huyền Băng - Bí Ẩn Từ Một Tình Yêu", "Ngọc Nữ Huyền Băng mang đến những bí ẩn từ một tình yêu bất diệt, khiến mọi người say mê."},
-                {"19", "Chương 19: Quỷ Cốc Tử - Kẻ Thù Từ Bóng Tối", "Quỷ Cốc Tử, kẻ thù từ bóng tối, mang theo những âm mưu tàn độc và đầy hiểm nguy."},
-                {"20", "Chương 20: Huyền Ảo Kiếm - Những Giấc Mơ Tận Cùng", "Huyền Ảo Kiếm xuất hiện trong những giấc mơ, đưa nhân vật vào cuộc hành trình kỳ thú."},
-                {"21", "Chương 21: Thần Y Huyền Cơ - Kẻ Chữa Bệnh Kỳ Diệu", "Thần Y Huyền Cơ, kẻ chữa bệnh kỳ diệu, mang lại hy vọng cho những người đang khổ đau."},
-                {"22", "Chương 22: Liệt Hỏa Kiếm - Ngọn Lửa Quyết Định Số Phận", "Liệt Hỏa Kiếm, ngọn lửa quyết định số phận, tạo nên những trận chiến không thể quên."},
-                {"23", "Chương 23: Nguyệt Tổ Vân Mộng - Khúc Hát Của Mộng Mơ", "Nguyệt Tổ hát khúc hát của mộng mơ, đưa tâm hồn đến những chân trời mới."},
-                {"24", "Chương 24: Tà Thần Tà Ma - Âm Mưu Từ Bóng Tối", "Tà Thần Tà Ma xuất hiện với âm mưu từ bóng tối, khiến mọi người phải cảnh giác."},
-                {"25", "Chương 25: Bạch Vân Cốc - Nơi Tình Bạn Được Thử Thách", "Bạch Vân Cốc trở thành nơi thử thách tình bạn, nơi mà lòng trung thành được kiểm chứng."},
-                {"26", "Chương 26: Cửu Âm Bạch Thảo - Bí Ẩn Từ Cuộc Chiến", "Cửu Âm Bạch Thảo, những bí ẩn từ cuộc chiến, tạo nên câu chuyện đầy kịch tính."},
-                {"27", "Chương 27: Lưu Ly Vân - Giấc Mơ Về Một Tình Yêu", "Lưu Ly Vân mơ về một tình yêu thuần khiết, vượt qua mọi rào cản của thời gian."},
-                {"28", "Chương 28: Ngọc Đế Hồi Xuân - Thời Gian Đã Thay Đổi", "Ngọc Đế Hồi Xuân trở về thời gian đã thay đổi, dẫn lối cho những cuộc phiêu lưu mới."},
-                {"29", "Chương 29: Xích Bích Cửu Thiên - Cuộc Chiến Đỉnh Cao", "Xích Bích Cửu Thiên mang đến cuộc chiến đỉnh cao, nơi mà những anh hùng tỏa sáng."},
-                {"30", "Chương 30: Cô Nương Đang Chờ - Chờ Đợi Một Tình Yêu", "Cô Nương đang chờ đợi một tình yêu, tâm hồn ngập tràn hy vọng và mơ mộng."},
-                {"31", "Chương 31: Hắc Ám Đế Quốc - Những Bí Ẩn Chưa Được Khám Phá", "Hắc Ám Đế Quốc chứa đựng nhiều bí ẩn chưa được khám phá, gợi mở những câu chuyện ly kỳ."},
-                {"32", "Chương 32: Chân Long Thượng Giới - Hành Trình Khám Phá Bầu Trời", "Chân Long Thượng Giới mở ra hành trình khám phá bầu trời, nơi có những điều kỳ diệu."},
-                {"33", "Chương 33: Bích Nguyệt Đường - Những Con Đường Đen Tối", "Bích Nguyệt Đường dẫn lối đến những con đường đen tối, nơi mà nguy hiểm luôn rình rập."},
-                {"34", "Chương 34: Kiếm Thế Mê - Giấc Mơ Về Sự Bất Tử", "Kiếm Thế Mê mang đến giấc mơ về sự bất tử, nơi mà mọi điều đều có thể xảy ra."},
-                {"35", "Chương 35: Ngọc Hoàng Bảo Tích - Kho Tàng Vô Giá", "Ngọc Hoàng Bảo Tích chứa đựng kho tàng vô giá, bảo vệ bí mật từ xa xưa."},
-                {"36", "Chương 36: Tuyết Sơn Thần Đao - Cuộc Chiến Dưới Băng", "Tuyết Sơn Thần Đao dẫn dắt cuộc chiến dưới băng, nơi mà sức mạnh và lòng can đảm gặp nhau."},
-                {"37", "Chương 37: Đoạn Kiếm - Sát Thủ Truyền Thuyết", "Đoạn Kiếm, sát thủ truyền thuyết, với tài năng vượt trội và sự bí ẩn không ai biết."},
-                {"38", "Chương 38: Huyết Hồn Thiên - Những Cuộc Tìm Kiếm Kỳ Diệu", "Huyết Hồn Thiên thực hiện những cuộc tìm kiếm kỳ diệu, dẫn lối cho những cuộc phiêu lưu."},
-                {"39", "Chương 39: Lục Địa Huyền Bí - Bí Ẩn Của Những Vùng Đất", "Lục Địa Huyền Bí chứa đựng nhiều bí ẩn của những vùng đất chưa từng được khám phá."},
-                {"40", "Chương 40: Nhật Nguyệt Thần Đồ - Vạn Năm Huyền Bí", "Nhật Nguyệt Thần Đồ mang đến những huyền bí vạn năm, mở ra cánh cửa đến quá khứ."},
-                {"41", "Chương 41: Huyền Thoại Kiếm - Câu Chuyện Về Những Anh Hùng", "Huyền Thoại Kiếm kể lại câu chuyện về những anh hùng, những người dám đứng lên vì chính nghĩa."},
-                {"42", "Chương 42: Tam Sinh Tam Thế - Tình Yêu Vượt Thời Gian", "Tam Sinh Tam Thế, tình yêu vượt thời gian, kết nối những số phận lại với nhau."},
-                {"43", "Chương 43: Đại Địa Thần - Kẻ Bảo Vệ Thế Giới", "Đại Địa Thần, kẻ bảo vệ thế giới, đứng vững trước mọi nguy hiểm để bảo vệ hòa bình."},
-                {"44", "Chương 44: Thần Đao Huyền Ảo - Những Câu Chuyện Huyền Bí", "Thần Đao Huyền Ảo mang đến những câu chuyện huyền bí, mở ra những bí ẩn chưa được biết."},
-                {"45", "Chương 45: Huyền Thoại Huyền Bí - Câu Chuyện Chưa Kể", "Huyền Thoại Huyền Bí còn nhiều câu chuyện chưa được kể, chờ đợi những người khám phá."},
-                {"46", "Chương 46: Cầu Tài Đón Lộc - Những Giấc Mơ Thành Hiện Thực", "Cầu Tài Đón Lộc giúp những giấc mơ thành hiện thực, tạo nên cuộc sống tươi đẹp hơn."},
-                {"47", "Chương 47: Phong Bạo - Cuộc Chiến Bão Táp", "Phong Bạo nổi lên giữa cuộc chiến bão táp, quyết tâm chiến thắng mọi khó khăn."},
-                {"48", "Chương 48: Thiên Địa Nhất Thần - Một Huyền Thoại Mới", "Thiên Địa Nhất Thần tạo nên một huyền thoại mới, khắc ghi dấu ấn trong lòng mọi người."},
-                {"49", "Chương 49: Mộng Ảo - Những Cuộc Hành Trình Đầy Mộng Mơ", "Mộng Ảo dẫn dắt những cuộc hành trình đầy mộng mơ, nơi mà mọi điều đều có thể xảy ra."},
-                {"50", "Chương 50: Đoạn Kết - Hành Trình Kết Thúc", "Đoạn Kết mang lại cái nhìn tổng quan về hành trình đã qua, nơi mà mọi kỷ niệm sẽ sống mãi."}
+                {"1", "Chương 1: Huyết Vân Kiếm - Huyền Thoại Bắt Đầu",
+                        "Trong vương quốc cổ đại nơi những bí mật bị che giấu bởi dòng thời gian, tồn tại một thanh kiếm mang tên Huyết Vân Kiếm. Huyền thoại kể rằng thanh kiếm này được rèn từ huyết lệ của những vị anh hùng đã ngã xuống trong cuộc chiến chống lại bóng tối hắc ám. "
+                                + "Nhân vật chính, một người trẻ tuổi với lòng nhiệt huyết và khát vọng khám phá sự thật, tình cờ phát hiện ra rằng mình là người được định mệnh lựa chọn để cầm lấy Huyết Vân Kiếm và bắt đầu cuộc hành trình vượt qua mọi hiểm nguy. "
+                                + "Trên hành trình, anh ta gặp gỡ những con người đặc biệt, từ những chiến binh lang thang đến những pháp sư giàu kinh nghiệm, mỗi người đều mang trong mình câu chuyện riêng và lý do để tiếp tục đấu tranh. "
+                                + "Mỗi bước chân của anh là sự đối mặt với những kẻ thù hùng mạnh, những sinh vật thần thoại và những phép thuật cổ xưa. Nhưng điều quan trọng hơn cả, cuộc hành trình này đưa anh đến việc khám phá bản chất thực sự của chính mình, liệu anh có đủ can đảm và bản lĩnh để đối mặt với số phận và trở thành người bảo vệ thực sự của vương quốc hay không?"},
+
+                {"2", "Chương 2: Thiên Long Bát Bộ - Cuộc Chiến Kỳ Diệu",
+                        "Sau khi nhận lấy Huyết Vân Kiếm, nhân vật chính thấy mình bị cuốn vào cuộc chiến không lối thoát giữa các thế lực mạnh mẽ nhất trong vương quốc. Cuộc chiến giữa những thế lực của Thiên Long - một nhóm bí ẩn gồm tám vị thần thú với quyền năng vô song, mỗi vị thần thú đại diện cho một yếu tố của thiên nhiên như gió, nước, lửa, đất, ánh sáng, bóng tối, thời gian và không gian. "
+                                + "Cuộc đối đầu bắt đầu khi một trong những kẻ thù chính của nhân vật chính, vốn là hậu duệ của một trong tám vị thần thú, quyết tâm sử dụng quyền năng của mình để tái lập lại trật tự thế giới theo ý mình, bằng cách tiêu diệt những ai dám chống đối. "
+                                + "Nhân vật chính nhận ra rằng để đối mặt với những đối thủ đầy quyền năng này, anh không chỉ cần sức mạnh của Huyết Vân Kiếm mà còn phải tìm hiểu cách kích hoạt năng lực tiềm ẩn trong chính mình. "
+                                + "Chương này đưa nhân vật vào những cuộc đối đầu kịch tính với những vị thần thú hùng mạnh, nơi anh học cách sử dụng và hòa hợp sức mạnh của mình với thiên nhiên, trở thành một phần của vòng quay vĩ đại trong cuộc chiến của vũ trụ."},
+
+                {"3", "Chương 3: Bích Huyết Đao - Báu Vật Từ Thế Giới Ngầm",
+                        "Bích Huyết Đao, thanh đao chứa đựng sức mạnh vô biên, được đồn đại là có khả năng hút lấy sinh khí từ người mà nó tiếp xúc. Nhân vật chính bắt gặp một nhóm kẻ thù đang tìm kiếm báu vật này, tin rằng nó sẽ giúp họ trở nên bất khả chiến bại trong cuộc chiến thống trị thế giới. "
+                                + "Khi nhân vật chính tiếp cận Bích Huyết Đao, anh nhận ra rằng thanh đao này không chỉ là một vũ khí, mà còn mang trong mình linh hồn của một chiến binh bất tử từ thời cổ đại. "
+                                + "Linh hồn ấy đã bị nguyền rủa, mãi mãi bị giam cầm trong thanh đao để trừng phạt tội ác của hắn trong cuộc chiến tranh giành quyền lực. Thanh đao có khả năng mang lại sức mạnh vô biên nhưng cũng có thể phá hủy tâm hồn của bất cứ ai cố ý chiếm đoạt nó. "
+                                + "Nhân vật chính không chỉ phải vượt qua những kẻ thù mà còn phải đối mặt với sức mạnh hấp dẫn của Bích Huyết Đao, học cách kiểm soát bản thân để không bị thanh đao chi phối. "
+                                + "Cuối cùng, sau một trận chiến ác liệt, anh quyết định phong ấn thanh đao này và giữ nó như một minh chứng cho sự nguy hiểm của tham vọng không kiểm soát."},
+
+                {"4", "Chương 4: Ngọc Hoàng Thái Cực - Cuộc Hành Trình Mạo Hiểm",
+                        "Ngọc Hoàng Thái Cực, viên ngọc thần kỳ được truyền tụng là chứa đựng sức mạnh của âm và dương, có khả năng hồi sinh người chết và ban phước cho người sống. Tuy nhiên, chỉ những người xứng đáng mới có thể sở hữu nó. "
+                                + "Được dẫn dắt bởi những dấu vết cổ xưa, nhân vật chính và nhóm của mình bắt đầu một hành trình vào sâu trong những khu rừng đầy nguy hiểm và núi non hiểm trở để tìm kiếm viên ngọc này. "
+                                + "Trên đường đi, họ gặp phải những sinh vật cổ xưa đang bảo vệ viên ngọc, mỗi sinh vật đều có sức mạnh và trí tuệ đáng sợ. Nhân vật chính nhận ra rằng viên ngọc không phải là một công cụ để giành quyền lực mà là một thử thách của lòng dũng cảm và sự hi sinh. "
+                                + "Trong hành trình, anh phải lựa chọn giữa việc sử dụng viên ngọc để cứu một người bạn đang bị thương nặng hoặc bảo vệ sức mạnh của nó để cứu nhiều người khác trong tương lai. "
+                                + "Quyết định cuối cùng của anh không chỉ cứu được người bạn mà còn chứng minh rằng anh xứng đáng với sức mạnh của viên ngọc, giúp anh đạt được sự tiến bộ về tâm linh và sức mạnh cá nhân."},
+
+                {"5", "Chương 5: Độc Cô Cầu Bại - Sự Trỗi Dậy Của Một Anh Hùng",
+                        "Trên hành trình tìm kiếm câu trả lời cho những bí mật về Huyết Vân Kiếm và định mệnh của mình, nhân vật chính nghe về một huyền thoại mang tên Độc Cô Cầu Bại, một chiến binh cô độc và bất bại từng đối mặt với mọi kẻ thù mà không ai có thể đánh bại. "
+                                + "Nhân vật chính quyết định tìm đến Độc Cô Cầu Bại để xin lời chỉ dạy và học hỏi, mong rằng sự khôn ngoan và kỹ năng chiến đấu của huyền thoại này sẽ giúp anh tiến xa hơn trên hành trình của mình. "
+                                + "Khi gặp Độc Cô Cầu Bại, anh phát hiện rằng người chiến binh huyền thoại này đã từ bỏ vũ khí và chọn sống cuộc đời thanh tịnh, vì ông nhận ra rằng sự bất bại không phải là tất cả, mà là sự hiểu biết sâu sắc về chính bản thân và ý nghĩa của cuộc sống. "
+                                + "Độc Cô Cầu Bại truyền lại cho anh những lời dạy quý giá về lòng kiên nhẫn, sự bình an trong tâm hồn và trách nhiệm của một chiến binh. "
+                                + "Nhờ những lời dạy này, nhân vật chính dần hiểu rằng sức mạnh thực sự không chỉ nằm ở khả năng chiến đấu, mà còn ở sự hiểu biết sâu sắc về bản thân và lòng nhân ái, những điều sẽ giúp anh vượt qua mọi thử thách trong tương lai."},
+
+                {"6", "Chương 6: Cửu Âm Chân Kinh - Bí Ẩn Từ Vạn Thế",
+                        "Cửu Âm Chân Kinh là một bộ kinh văn huyền bí được cho là chứa đựng tất cả các tri thức về võ công và thuật pháp của những bậc thầy cổ xưa. Được truyền tụng là bảo vật vô giá, nhưng cũng là mục tiêu săn đuổi của những kẻ tham lam muốn sở hữu sức mạnh vô biên. "
+                                + "Nhân vật chính, cùng với những đồng đội của mình, bắt đầu hành trình tìm kiếm Cửu Âm Chân Kinh. Họ phải đối mặt với vô số thử thách, bao gồm các phép thuật và cạm bẫy được đặt ra từ hàng thế kỷ trước để bảo vệ kinh văn khỏi rơi vào tay kẻ xấu. "
+                                + "Trong quá trình này, nhân vật chính phát hiện ra rằng Cửu Âm Chân Kinh không chỉ là một bộ sách về sức mạnh mà còn là bài học về đạo đức và nhân văn, giúp anh thấu hiểu rằng võ công không chỉ để chiến đấu, mà còn để bảo vệ và mang lại hòa bình. "
+                                + "Anh quyết định không chiếm đoạt bộ kinh văn này, mà sẽ bảo vệ nó để tránh cho thế giới bị tàn phá bởi những kẻ tham vọng, đồng thời cũng nhận ra rằng con đường của mình là tìm cách sử dụng sức mạnh để mang lại lợi ích cho mọi người, chứ không chỉ cho bản thân mình."},
+
+                // Add similar expansions for remaining chapters as needed
         };
     }
+
+
 
     private void showChapterList(@NonNull View anchor) {
         // Inflate the view for the popup

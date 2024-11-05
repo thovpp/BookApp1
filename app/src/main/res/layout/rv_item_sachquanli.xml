@@ -165,7 +165,7 @@
 
         <!-- Column 4 -->
         <LinearLayout
-            android:id="@+id/btn_thongke"
+            android:id="@+id/btn_delete"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -177,13 +177,13 @@
                 android:id="@+id/imageView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_thongke" />
+                app:srcCompat="@drawable/ic_delete" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thống Kê"
+                android:text="Xóa Truyện"
                 android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>

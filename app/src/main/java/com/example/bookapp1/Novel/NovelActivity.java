@@ -1,6 +1,7 @@
 package com.example.bookapp1.Novel;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -12,9 +13,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
 import com.example.bookapp1.R;
 import com.example.bookapp1.Database.DatabaseHelper;
 import com.example.bookapp1.Models.Novel;
+
+import java.io.File;
 
 public class NovelActivity extends AppCompatActivity {
     private DatabaseHelper dbHelper;
@@ -23,6 +27,7 @@ public class NovelActivity extends AppCompatActivity {
     private int novelId;
     private Button btnGioiThieu, btnDanhGia, btnBinhLuan, btnDSChuong;
     private View underline;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +67,21 @@ public class NovelActivity extends AppCompatActivity {
         Novel novel = dbHelper.getNovelById(novelId);
 
         if (novel != null) {
+            novelImageView = findViewById(R.id.imageView2);
+            Log.d("Image URI", "URI for Glide: " + novel.getThumbnailUri());
+
+            File imageFile = new File(novel.getThumbnailUri());
+            if (imageFile.exists()) {
+                Glide.with(this)
+                        .load(imageFile)  // Load the file path
+                        .placeholder(R.drawable.background_novel_1)  // Placeholder while loading
+                        .error(R.drawable._logo)  // Image if loading fails
+                        .into(novelImageView);  // Load image into ImageView
+            } else {
+                // If file doesn’t exist, set a default image
+                novelImageView.setImageResource(R.drawable._logo);
+            }
+
             // Set novel details to views (e.g., ImageView, TextView) as needed
             ImageView thumbnailImageView = findViewById(R.id.imageView2);
             TextView titleTextView = findViewById(R.id.tv_title);
@@ -102,6 +122,7 @@ public class NovelActivity extends AppCompatActivity {
                 .replace(R.id.fragment_container, fragment)
                 .commit();
     }
+
     private void setUnderline(Button button) {
         ViewGroup.LayoutParams params = underline.getLayoutParams();
         params.width = button.getWidth();
