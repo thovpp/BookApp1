@@ -1,26 +1,15 @@
 package com.example.bookapp1;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bookapp1.Dtos.BaseItem;
-import com.example.bookapp1.Dtos.RvItem_History;
-import com.example.bookapp1.Main_Fragment.MainAdapter;
-import com.example.bookapp1.Main_Fragment.khamPha_Fragment;
-import com.example.bookapp1.Main_Fragment.taiKhoan_Fragment;
-import com.example.bookapp1.Main_Fragment.tuTruyen_Fragment;
-import com.example.bookapp1.Main_Fragment.xepHang_Fragment;
-import com.example.bookapp1.database.DatabaseHelper;
-import com.example.bookapp1.models.Novel;
+import com.example.bookapp1.DTOs.BaseItem;
+import com.example.bookapp1.User.MainAdapter;
+import com.example.bookapp1.Database.DatabaseHelper;
+import com.example.bookapp1.Models.Novel;
 
 import java.util.List;
 

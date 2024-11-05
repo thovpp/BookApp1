@@ -12,7 +12,7 @@
 
         <!-- Back Button -->
         <ImageButton
-            android:id="@+id/iv_back"
+            android:id="@+id/ib_back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:scaleType="centerCrop"
@@ -20,14 +20,14 @@
             android:rotation="180"
             android:padding="0dp"
             android:backgroundTint="@android:color/transparent"
-            android:layout_marginVertical="32dp"
-            android:src="@drawable/ic_back" />
+            android:rotationY="180"
+            android:src="@drawable/ic_back_arrow" />
 
         <!-- Add Novel Title -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add New Novel"
+            android:text="Thêm Truyện Mới"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:gravity="center"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="#36393A"
-            android:hint="Novel Title"
+            android:hint="Tiêu Đề"
             android:textColor="@color/white"
             android:padding="12dp"
             android:textColorHint="#FFFFFF" />
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="#36393A"
-            android:hint="Author"
+            android:hint="Tác Giả"
             android:textColor="@color/white"
             android:padding="12dp"
             android:textColorHint="#FFFFFF" />
@@ -64,26 +64,29 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="#36393A"
-            android:hint="Category"
+            android:hint="Thể loại"
             android:textColor="@color/white"
             android:padding="12dp"
             android:textColorHint="#FFFFFF" />
 
         <!-- Choose Image Button -->
         <Button
+            style="@style/Widget.MaterialComponents.Button"
             android:id="@+id/chooseImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose Image"
+            android:text="Chọn Ảnh Bìa"
+            android:drawableEnd="@drawable/ic_camera"
             android:layout_marginBottom="16dp" />
 
         <!-- Thumbnail Image Preview -->
         <ImageView
             android:id="@+id/thumbnailImageView"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
+            android:src="@drawable/background_novel_2"
             android:layout_marginBottom="16dp"
             android:background="@android:color/darker_gray" />
 
@@ -94,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="#36393A"
-            android:hint="Total Chapters"
+            android:hint="Số chương dự tính"
             android:textColor="@color/white"
             android:padding="12dp"
             android:inputType="number"
@@ -107,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="#36393A"
-            android:hint="Summary"
+            android:hint="Tóm tắt cốt truyên"
             android:textColor="@color/white"
             android:padding="12dp"
             android:textColorHint="#FFFFFF"
@@ -122,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="#36393A"
-            android:hint="Content"
+            android:hint="Nội dung"
             android:textColor="@color/white"
             android:padding="12dp"
             android:textColorHint="#FFFFFF"

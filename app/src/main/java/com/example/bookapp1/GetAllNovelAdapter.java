@@ -1,7 +1,6 @@
 package com.example.bookapp1;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,8 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.bookapp1.database.DatabaseHelper;
-import com.example.bookapp1.models.Novel;
+import com.example.bookapp1.Database.DatabaseHelper;
+import com.example.bookapp1.Models.Novel;
 
 import java.util.List;
 

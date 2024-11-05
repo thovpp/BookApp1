@@ -14,8 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <!-- Mục 1: Loại -->
             <LinearLayout
@@ -35,15 +34,13 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!-- RadioGroup for Loai (using GridLayout for 2 items per row) -->
-                <GridLayout
+                <!-- RadioGroup for Loai (allowing only 1 option at a time) -->
+                <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:columnCount="2"
-                    android:orientation="horizontal"
-                    android:horizontalSpacing="10dp"
-                    android:verticalSpacing="10dp">
+                    android:orientation="horizontal">
 
+                    <!-- Radio Buttons for Loai Section -->
                     <RadioButton
                         android:id="@+id/radioSangTac"
                         android:layout_width="wrap_content"
@@ -60,7 +57,7 @@
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
-                </GridLayout>
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -82,20 +79,19 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!-- GridLayout for Sorting Options (2 items per row) -->
-                <GridLayout
+                <!-- RadioGroup for Sorting Options (allowing only 1 option at a time) -->
+                <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:columnCount="2"
-                    android:orientation="horizontal"
-                    android:horizontalSpacing="10dp"
-                    android:verticalSpacing="10dp">
+                    android:orientation="horizontal">
 
+                    <!-- Radio Buttons for Sorting Section -->
                     <RadioButton
                         android:id="@+id/radioChuong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Chương"
+                        android:layout_weight="1"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -104,6 +100,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Tên"
+                        android:layout_weight="1"
+
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -112,18 +110,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mới Đăng"
+                        android:layout_weight="1"
+
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioBinhLuan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Bình Luận"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
 
-                </GridLayout>
+
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -242,12 +236,14 @@
 
     </ScrollView>
 
+    <!-- Bottom Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_gravity="bottom"
         android:padding="5dp"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/buttonFilter"
             android:layout_width="match_parent"
@@ -256,7 +252,7 @@
             android:text="Gửi"
             android:layout_marginHorizontal="10dp"
             android:textSize="20sp"
-         />
+            />
 
         <!-- Reset Button -->
         <Button
@@ -266,11 +262,8 @@
             android:layout_weight="1"
             android:text="Reset"
             android:layout_marginHorizontal="10dp"
-
             android:textSize="20sp"
-           />
+            />
     </LinearLayout>
-    <!-- Filter Button -->
-
 
 </FrameLayout>

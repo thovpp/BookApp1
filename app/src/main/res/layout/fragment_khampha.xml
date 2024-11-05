@@ -12,7 +12,7 @@ android:layout_height="wrap_content">
     android:layout_margin="12dp"
     android:background="#2B2D30"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".User.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"

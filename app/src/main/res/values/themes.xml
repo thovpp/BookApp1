@@ -9,8 +9,17 @@
         <item name="colorControlActivated">@color/yellow</item>
     </style>
     <style name="Theme.BookApp1" parent="Base.Theme.BookApp1" />
-    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textColorHint">@color/white</item> <!-- Màu cho chữ hint -->
-    </style>
+    <!-- res/values/styles.xml -->
+        <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+            <!-- Set the color of the query text to white -->
+            <item name="android:textColor">#FFFFFF</item>
+            <!-- Set the hint text color to white -->
+            <item name="android:textColorHint">#FFFFFF</item>
+            <!-- Set the background of the query text field (optional) -->
+            <item name="android:queryBackground">@android:color/white</item>
+            <!-- Set the search icon to a custom white icon -->
+            <item name="android:searchIcon">@drawable/ic_search</item>
+        </style>
+
+    <!-- res/values/styles.xml -->
 </resources>

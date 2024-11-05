@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".NovelActivity">
+        tools:context=".Novel.NovelActivity">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -104,7 +104,7 @@
                                 app:cardElevation="4dp">
 
                                 <TextView
-                                    android:id="@+id/textView3"
+                                    android:id="@+id/tv_genre"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="0dp"
@@ -115,7 +115,7 @@
                             </androidx.cardview.widget.CardView>
 
                             <TextView
-                                android:id="@+id/textView12"
+                                android:id="@+id/tv_title"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -127,7 +127,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView000"
+                                android:id="@+id/tv_author"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="5dp"
@@ -164,7 +164,7 @@
                             </LinearLayout>
 
                             <TextView
-                                android:id="@+id/textView6"
+                                android:id="@+id/tv_total_danhgia"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="(165 đánh giá)"

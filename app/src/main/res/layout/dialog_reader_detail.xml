@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/black"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="70dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background_novel_2" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Username -->
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tv_popup_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Username"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:layout_weight="4"
+                android:textSize="14sp"
+                android:padding="8dp" />
+            <TextView
+                android:id="@+id/tv_popup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+
+                android:text="luottruyen@gmail.com"
+                android:layout_weight="1"
+
+                android:textSize="14sp"
+                android:padding="8dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Phone"
+                android:layout_weight="4"
+                android:textSize="14sp"
+                android:padding="8dp" />
+            <TextView
+                android:id="@+id/tv_popup_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="luottruyen@gmail.com"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+
+                android:textSize="14sp"
+                android:padding="8dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Role"
+                android:layout_weight="4"
+                android:textSize="14sp"
+                android:padding="8dp" />
+            <TextView
+                android:id="@+id/tv_popup_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="luottruyen@gmail.com"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+
+                android:textSize="14sp"
+                android:padding="8dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:layout_weight="4"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:padding="8dp" />
+            <TextView
+                android:id="@+id/tv_popup_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="luottruyen@gmail.com"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+
+                android:textSize="14sp"
+                android:padding="8dp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_close_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Close"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

@@ -1,40 +1,27 @@
 package com.example.bookapp1;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.Manifest;
 
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import com.example.bookapp1.database.DatabaseHelper;
-import com.example.bookapp1.models.Novel;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import com.example.bookapp1.Database.DatabaseHelper;
+import com.example.bookapp1.Models.Novel;
 
 public class Novel_Add_Edit_Activity extends AppCompatActivity {
     private EditText titleEditText, authorEditText, categoryEditText, totalChaptersEditText, summaryEditText, contentEditText;
     private Button addNovelButton, chooseImageButton;
+    ImageButton backButton;
     private ImageView thumbnailImageView;
     private DatabaseHelper dbHelper;
     private static final int PICK_IMAGE_REQUEST = 1;
@@ -56,7 +43,9 @@ public class Novel_Add_Edit_Activity extends AppCompatActivity {
         thumbnailImageView = findViewById(R.id.thumbnailImageView);
         addNovelButton = findViewById(R.id.addNovelButton);
         chooseImageButton = findViewById(R.id.chooseImageButton);
+        backButton = findViewById(R.id.ib_back);
 
+        backButton.setOnClickListener(v -> finish());
         chooseImageButton.setOnClickListener(v -> openImageChooser());
 
         addNovelButton.setOnClickListener(v -> addNovelToDatabase());

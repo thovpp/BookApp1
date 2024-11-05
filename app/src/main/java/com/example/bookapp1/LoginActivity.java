@@ -11,8 +11,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.bookapp1.database.DatabaseHelper;
-import com.example.bookapp1.models.Reader;
+import com.example.bookapp1.User.MainActivity;
+import com.example.bookapp1.Database.DatabaseHelper;
+import com.example.bookapp1.Models.Reader;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText emailEditText, passwordEditText;
